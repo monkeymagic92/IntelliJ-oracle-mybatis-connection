@@ -4,6 +4,12 @@
 <mapper namespace="com.jy.test.TestMapper">
     <select id="selBoard" resultType="TestVO">
         SELECT i_board, title, ctnt FROM t_board
-        WHERE i_board = 1
     </select>
+
+    <insert id="regBoard" parameterType="TestVO">
+        INSERT INTO t_board
+        (i_board, title, ctnt, i_user)
+        VALUES
+        (#{i_board}, #{title}, #{ctnt}, #{i_user})
+    </insert>
 </mapper>

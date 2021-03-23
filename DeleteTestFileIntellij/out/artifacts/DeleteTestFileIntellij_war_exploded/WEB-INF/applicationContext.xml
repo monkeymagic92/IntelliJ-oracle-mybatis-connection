@@ -25,6 +25,12 @@
         <property name="password" value="${db.password}"/>
     </bean>
 
+    <!--
+          db관련 정보 properties에 넣기위함 용
+          classpath는 resources 처럼 Structure에 들어가서 resources등록하면 됨
+     -->
+    <context:property-placeholder location="classpath:/config/config.properties" />
+
     <!-- Mysql <-> Mybatis를 연결해주는 객체
          mybatis-config.xml - mybatis alias 지정하는 파일
          resources - mapper 디렉토리 안에 DB 쿼리문 파일있음
@@ -41,10 +47,6 @@
     </bean>
 
 
-    <!--
-          db관련 정보 properties에 넣기위함 용
-          classpath는 resources 처럼 Structure에 들어가서 resources등록하면 됨
-     -->
-    <context:property-placeholder location="classpath:/config/config.properties" />
+
 
 </beans>

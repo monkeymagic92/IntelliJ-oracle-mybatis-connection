@@ -12,7 +12,9 @@
     <!-- 아래 패키지로 경로를 확인하겠다(?) 찾겠다 -->
     <context:component-scan base-package="com.jy.test" />
 
-    <!-- 이클립스 servlet-context.xml 에서 퍼온 것-->
+    <!-- 이클립스로 치면 servlet-context.xml
+         mybatis 위치 찾는 녀석
+    -->
     <mybatis-spring:scan base-package="com.jy.test"/>
 
     <!-- View Resolver 설정 -->

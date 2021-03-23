@@ -11,4 +11,5 @@ public class TestVO {
     private int i_board;
     private String title;
     private String ctnt;
+    private int i_user;
 }
